@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<title>Xtreme Rock Paper Scissors</title>
+			<style></style>
+			<link rel = "stylesheet" href = "css.css" />
+			<script src = "game.js"></script>
+		</head>
+		
+		<body onload = "initialize();">
+			<h2><a href = "rules.html">Rules</a></h2>
+			<h1>Round <span id = "round">1</span></h1>
+			<table align = "center">
+				<tr>
+					<th class = "human"><img class = "human" id = "background" src = "images/blue background.png" /></th>
+					<th class = "vs">VS.</th>
+					<th class = "computer"><img class = "computer" id = "mysterybackground" src = "images/question.png" /></th>
+				</tr>
+			</table>
+			<table align = "left">
+				<tr>
+					<th colspan = "3">Your Arsenal</th>
+				</tr>
+				<tr>
+					<th>Rock: <span id = "humRockTracker">5</span></th>
+					<th>Paper: <span id = "humPaperTracker">5</span></th>
+					<th>Scissors: <span id = "humScissorsTracker">5</span></th>
+				</tr>
+				<tr>
+					<th><img src = "images/rock.png" /></th>
+					<th><img src = "images/paper.png" /></th> 
+					<th><img src = "images/scissor.png" /></th>
+			</table>
+			<table align = "right">
+					<tr>
+						<th colspan = "3">Bot's Arsenal</th>
+					</tr>
+					<tr>
+						<th>Rock: <span id = "compRockTracker">5</span></th>
+						<th>Paper: <span id = "compPaperTracker">5</span></th>
+						<th>Scissors: <span id = "compScissorsTracker">5</span></th>
+					</tr>
+					<tr>
+						<th><img src = "images/rock.png" /></th>
+						<th><img src = "images/paper.png" /></th>
+						<th><img src = "images/scissor.png" /></th>
+					</tr>
+			</table>
+			<br />
+			<table align = "center">
+				<tr>
+					<td><span id = "message">Click on rock, paper or scissors below.</span></td>
+				</tr>
+			</table>
+			<div class = "options">
+				<button class = "new" onclick = "reset();">Reset Game</button>
+				<img class = "options" src = "images/rockopt.png" onclick = "checkSelection(4);" />
+				<img class = "options" src = "images/paperopt.png" onclick = "checkSelection(5);" />
+				<img class = "options" src = "images/scissoropt.png" onclick = "checkSelection(6);" />
+				<button class = "continue" onclick = "newRound();">Next Round</button>
+			</div>
+			<hr />
+			<div class = "log" id = "log"></div>
+		</body>
+	</html>
